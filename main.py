@@ -6,14 +6,20 @@ class MainWindow(QtWidgets.QMainWindow, Ui_Dialog):
     def __init__(self, *args, **kwargs):
         QtWidgets.QMainWindow.__init__(self, *args, **kwargs)
         self.setupUi(self)
-        self.pushButton.clicked.connect(self.clicked)
-    def clicked(self):
-                # self.progressBar.setVisible(True)
-                # correoEmisor=self.correo.text()
-                # passEmisor=self.passs.text()
+        self.btnContrato.clicked.connect(self.getFecha)
+        self.btnInicial.clicked.connect(self.getFechaIni)
+        
+        
+        
+        
+    def getFecha(self):
                 fecha=self.calendarWidget.selectedDate()
-                print(fecha.toString(Qt.ISODate))
-                
+                fecha=fecha.toString(Qt.ISODate)
+                self.lineEdit.setText(fecha)
+    def getFechaIni(self):
+                fecha=self.calendarWidget.selectedDate()
+                fecha=fecha.toString(Qt.ISODate)
+                self.lineEdit_2.setText(fecha)
         
     
 if __name__ == "__main__":
