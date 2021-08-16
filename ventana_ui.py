@@ -1,22 +1,20 @@
 # -*- coding: utf-8 -*-
+
 # Form implementation generated from reading ui file 'Tabla.ui'
 #
 # Created by: PyQt5 UI code generator 5.9.2
 #
 # WARNING! All changes made in this file will be lost!
-#
-# Creado por Anthoni Portocarrero Rodriguez en su totalidad
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-class Ui_Dialog(object):
-    def setupUi(self, Dialog):
-        Dialog.setObjectName("Dialog")
-        Dialog.resize(1112, 789)
-        self.frame = QtWidgets.QFrame(Dialog)
+class Ui_Huertas(object):
+    def setupUi(self, Huertas):
+        Huertas.setObjectName("Huertas")
+        Huertas.resize(1093, 785)
+        self.frame = QtWidgets.QFrame(Huertas)
         self.frame.setGeometry(QtCore.QRect(0, 0, 1111, 791))
-        self.frame.setStyleSheet("\n"
-"")
+        self.frame.setStyleSheet("")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
@@ -25,10 +23,10 @@ class Ui_Dialog(object):
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(self.frame)
         self.label_2.setEnabled(True)
-        self.label_2.setGeometry(QtCore.QRect(40, 20, 281, 331))
+        self.label_2.setGeometry(QtCore.QRect(50, 70, 201, 231))
         self.label_2.setFrameShadow(QtWidgets.QFrame.Plain)
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("../../../Desktop/diseño/xdddd.svg"))
+        self.label_2.setPixmap(QtGui.QPixmap("respaldo/imagenHuertas.ico"))
         self.label_2.setObjectName("label_2")
         self.label_5 = QtWidgets.QLabel(self.frame)
         self.label_5.setGeometry(QtCore.QRect(340, 150, 91, 41))
@@ -47,46 +45,58 @@ class Ui_Dialog(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.name.setFont(font)
-        self.name.setStyleSheet("border-color: rgb(18, 154, 168);")
+        self.name.setStyleSheet("border-color: rgb(18, 154, 168);\n"
+"background-color: rgb(255, 254, 248);")
         self.name.setText("")
+        self.name.setClearButtonEnabled(True)
         self.name.setObjectName("name")
         self.lastname = QtWidgets.QLineEdit(self.frame)
         self.lastname.setGeometry(QtCore.QRect(440, 220, 521, 31))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.lastname.setFont(font)
-        self.lastname.setStyleSheet("border-color: rgb(18, 154, 168);")
+        self.lastname.setStyleSheet("border-color: rgb(18, 154, 168);\n"
+"background-color: rgb(255, 254, 248);")
         self.lastname.setText("")
+        self.lastname.setClearButtonEnabled(True)
         self.lastname.setObjectName("lastname")
         self.dni = QtWidgets.QLineEdit(self.frame)
         self.dni.setGeometry(QtCore.QRect(440, 280, 121, 31))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.dni.setFont(font)
-        self.dni.setStyleSheet("border-color: rgb(18, 154, 168);")
+        self.dni.setStyleSheet("border-color: rgb(18, 154, 168);\n"
+"background-color: rgb(255, 254, 248);")
         self.dni.setText("")
+        self.dni.setClearButtonEnabled(True)
         self.dni.setObjectName("dni")
         self.calendarWidget = QtWidgets.QCalendarWidget(self.frame)
         self.calendarWidget.setGeometry(QtCore.QRect(30, 420, 464, 289))
+        self.calendarWidget.setStyleSheet("\n"
+"")
         self.calendarWidget.setObjectName("calendarWidget")
         self.lineEdit = QtWidgets.QLineEdit(self.frame)
         self.lineEdit.setGeometry(QtCore.QRect(540, 500, 131, 31))
         self.lineEdit.setText("")
         self.lineEdit.setReadOnly(True)
+        self.lineEdit.setClearButtonEnabled(False)
         self.lineEdit.setObjectName("lineEdit")
         self.lineEdit_2 = QtWidgets.QLineEdit(self.frame)
         self.lineEdit_2.setGeometry(QtCore.QRect(540, 610, 131, 31))
         self.lineEdit_2.setReadOnly(True)
+        self.lineEdit_2.setClearButtonEnabled(False)
         self.lineEdit_2.setObjectName("lineEdit_2")
         self.btnContrato = QtWidgets.QPushButton(self.frame)
         self.btnContrato.setGeometry(QtCore.QRect(540, 450, 131, 41))
-        self.btnContrato.setStyleSheet("background-color: rgb(170, 255, 255);\n"
-"font: 75 9pt \"MS Shell Dlg 2\";")
+        self.btnContrato.setStyleSheet("background-color: rgb(101, 255, 183);\n"
+"\n"
+"font: 75 12pt \"MS Shell Dlg 2\";")
         self.btnContrato.setObjectName("btnContrato")
         self.btnInicial = QtWidgets.QPushButton(self.frame)
         self.btnInicial.setGeometry(QtCore.QRect(540, 560, 131, 41))
-        self.btnInicial.setStyleSheet("background-color: rgb(88, 255, 191);\n"
-"font: 75 9pt \"MS Shell Dlg 2\";")
+        self.btnInicial.setStyleSheet("background-color: rgb(101, 255, 183);\n"
+"\n"
+"font: 75 12pt \"MS Shell Dlg 2\";")
         self.btnInicial.setObjectName("btnInicial")
         self.label_8 = QtWidgets.QLabel(self.frame)
         self.label_8.setGeometry(QtCore.QRect(740, 450, 91, 41))
@@ -100,45 +110,34 @@ class Ui_Dialog(object):
         font.setPointSize(14)
         self.label_9.setFont(font)
         self.label_9.setObjectName("label_9")
-        self.importe = QtWidgets.QLineEdit(self.frame)
-        self.importe.setGeometry(QtCore.QRect(840, 450, 171, 41))
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        self.importe.setFont(font)
-        self.importe.setStyleSheet("border-color: rgb(18, 154, 168);")
-        self.importe.setText("")
-        self.importe.setObjectName("importe")
-        self.inicial = QtWidgets.QLineEdit(self.frame)
-        self.inicial.setGeometry(QtCore.QRect(840, 500, 171, 41))
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        self.inicial.setFont(font)
-        self.inicial.setStyleSheet("border-color: rgb(18, 154, 168);")
-        self.inicial.setText("")
-        self.inicial.setObjectName("inicial")
         self.radioButton = QtWidgets.QRadioButton(self.frame)
-        self.radioButton.setGeometry(QtCore.QRect(750, 580, 119, 23))
+        self.radioButton.setGeometry(QtCore.QRect(750, 620, 119, 23))
         self.radioButton.setStyleSheet("font: 10pt \"MS Shell Dlg 2\";")
         self.radioButton.setObjectName("radioButton")
+        self.radioButton.setChecked(True)
+        
         self.radioButton_2 = QtWidgets.QRadioButton(self.frame)
-        self.radioButton_2.setGeometry(QtCore.QRect(890, 580, 119, 23))
-        self.radioButton_2.setStyleSheet("font: 10pt \"MS Shell Dlg 2\";")
+        self.radioButton_2.setGeometry(QtCore.QRect(890, 620, 119, 23))
+        self.radioButton_2.setStyleSheet("font: 10pt \"MS Shell Dlg 2\";\n"
+"")
         self.radioButton_2.setObjectName("radioButton_2")
         self.comboBox = QtWidgets.QComboBox(self.frame)
         self.comboBox.setGeometry(QtCore.QRect(830, 280, 131, 31))
-        self.comboBox.setStyleSheet("font: 10pt \"MS Shell Dlg 2\";")
+        self.comboBox.setStyleSheet("font: 12pt \"MS Shell Dlg 2\";\n"
+"background-color: rgb(101, 255, 183);\n"
+"")
         self.comboBox.setObjectName("comboBox")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
-        self.comboBox.addItem("")
         self.btnCalcular = QtWidgets.QPushButton(self.frame)
-        self.btnCalcular.setGeometry(QtCore.QRect(750, 640, 261, 51))
-        self.btnCalcular.setStyleSheet("background-color: #4CAF50;\n"
-"font: 75 16pt \"MS Shell Dlg 2\";\n"
-"color:rgb(228, 234, 255);\n"
-"")
+        self.btnCalcular.setGeometry(QtCore.QRect(750, 670, 261, 51))
+        self.btnCalcular.setWhatsThis("")
+        self.btnCalcular.setStyleSheet("background-color: rgb(55, 162, 61);\n"
+"color: rgb(255, 255, 255);\n"
+"font: 64 18pt \"Segoe UI Semibold\";\n"
+"selection-color: rgb(255, 255, 127);")
         self.btnCalcular.setObjectName("btnCalcular")
         self.line = QtWidgets.QFrame(self.frame)
         self.line.setGeometry(QtCore.QRect(30, 355, 981, 41))
@@ -151,38 +150,61 @@ class Ui_Dialog(object):
         self.label_10.setStyleSheet("font: 75 12pt \"MS Shell Dlg 2\";\n"
 "color: rgb(255, 0, 4);")
         self.label_10.setObjectName("label_10")
+        self.label_11 = QtWidgets.QLabel(self.frame)
+        self.label_11.setGeometry(QtCore.QRect(740, 550, 91, 41))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.label_11.setFont(font)
+        self.label_11.setObjectName("label_11")
+        self.cuota = QtWidgets.QSpinBox(self.frame)
+        self.cuota.setGeometry(QtCore.QRect(840, 560, 71, 22))
+        self.cuota.setStyleSheet("font: 12pt \"MS Shell Dlg 2\";\n"
+"background-color: rgb(255, 254, 248);")
+        self.cuota.setMaximum(150)
+        self.cuota.setObjectName("cuota")
+        self.inicial = QtWidgets.QDoubleSpinBox(self.frame)
+        self.inicial.setGeometry(QtCore.QRect(840, 510, 161, 22))
+        self.inicial.setStyleSheet("font: 12pt \"MS Shell Dlg 2\";\n"
+"background-color: rgb(255, 254, 248);")
+        self.inicial.setMaximum(999999999.99)
+        self.inicial.setObjectName("inicial")
+        self.importe = QtWidgets.QDoubleSpinBox(self.frame)
+        self.importe.setGeometry(QtCore.QRect(840, 460, 161, 22))
+        self.importe.setStyleSheet("font: 12pt \"MS Shell Dlg 2\";\n"
+"background-color: rgb(255, 254, 248);")
+        self.importe.setMaximum(999999999.99)
+        self.importe.setObjectName("importe")
 
-        self.retranslateUi(Dialog)
-        QtCore.QMetaObject.connectSlotsByName(Dialog)
+        self.retranslateUi(Huertas)
+        QtCore.QMetaObject.connectSlotsByName(Huertas)
 
-    def retranslateUi(self, Dialog):
+    def retranslateUi(self, Huertas):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.label.setText(_translate("Dialog", "<html><head/><body><p align=\"center\"><span style=\" font-size:18pt; font-weight:600;\">Tabla de Amortización</span></p></body></html>"))
-        self.label_5.setText(_translate("Dialog", "<html><head/><body><p><span style=\" font-size:11pt;\">Nombre:</span></p></body></html>"))
-        self.label_6.setText(_translate("Dialog", "<html><head/><body><p><span style=\" font-size:11pt;\">Apellido:</span></p></body></html>"))
-        self.label_7.setText(_translate("Dialog", "<html><head/><body><p><span style=\" font-size:11pt;\">DNI:</span></p></body></html>"))
-        self.btnContrato.setText(_translate("Dialog", "Fecha Contrato"))
-        self.btnInicial.setText(_translate("Dialog", "Fecha Inicial"))
-        self.label_8.setText(_translate("Dialog", "<html><head/><body><p><span style=\" font-size:11pt;\">Importe:</span></p></body></html>"))
-        self.label_9.setText(_translate("Dialog", "<html><head/><body><p><span style=\" font-size:11pt;\">Inicial:</span></p></body></html>"))
-        self.radioButton.setText(_translate("Dialog", "Soles"))
-        self.radioButton_2.setText(_translate("Dialog", "Dolares"))
-        self.comboBox.setItemText(0, _translate("Dialog", "Proyecto"))
-        self.comboBox.setItemText(1, _translate("Dialog", "Olivar"))
-        self.comboBox.setItemText(2, _translate("Dialog", "Oasis"))
-        self.comboBox.setItemText(3, _translate("Dialog", "Apolo"))
-        self.comboBox.setItemText(4, _translate("Dialog", "Falcon"))
-        self.btnCalcular.setText(_translate("Dialog", "Calcular"))
-        self.label_10.setText(_translate("Dialog", "<html><head/><body><p align=\"center\">Aqui va un texto de error</p></body></html>"))
-        self.label_10.setVisible(False)
+        Huertas.setWindowTitle(_translate("Huertas", "Huertas"))
+        self.label.setText(_translate("Huertas", "<html><head/><body><p align=\"center\"><span style=\" font-size:18pt; font-weight:600;\">Tabla de Amortización</span></p></body></html>"))
+        self.label_5.setText(_translate("Huertas", "<html><head/><body><p><span style=\" font-size:11pt;\">Nombre:</span></p></body></html>"))
+        self.label_6.setText(_translate("Huertas", "<html><head/><body><p><span style=\" font-size:11pt;\">Apellido:</span></p></body></html>"))
+        self.label_7.setText(_translate("Huertas", "<html><head/><body><p><span style=\" font-size:11pt;\">DNI:</span></p></body></html>"))
+        self.btnContrato.setText(_translate("Huertas", "Fecha Contrato"))
+        self.btnInicial.setText(_translate("Huertas", "Fecha Inicial"))
+        self.label_8.setText(_translate("Huertas", "<html><head/><body><p><span style=\" font-size:11pt;\">Importe:</span></p></body></html>"))
+        self.label_9.setText(_translate("Huertas", "<html><head/><body><p><span style=\" font-size:11pt;\">Inicial:</span></p></body></html>"))
+        self.radioButton.setText(_translate("Huertas", "Soles"))
+        self.radioButton_2.setText(_translate("Huertas", "Dolares"))
+        self.comboBox.setItemText(0, _translate("Huertas", "Proyecto"))
+        self.comboBox.setItemText(1, _translate("Huertas", "Olivar"))
+        self.comboBox.setItemText(2, _translate("Huertas", "Oasis"))
+        self.comboBox.setItemText(3, _translate("Huertas", "Apolo"))
+        self.btnCalcular.setText(_translate("Huertas", "Calcular"))
+        self.label_11.setText(_translate("Huertas", "<html><head/><body><p><span style=\" font-size:11pt;\">Cuotas:</span></p></body></html>"))
+
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Dialog = QtWidgets.QDialog()
-    ui = Ui_Dialog()
-    ui.setupUi(Dialog)
-    Dialog.show()
+    Huertas = QtWidgets.QDialog()
+    ui = Ui_Huertas()
+    ui.setupUi(Huertas)
+    Huertas.show()
     sys.exit(app.exec_())
 
