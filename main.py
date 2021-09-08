@@ -1,4 +1,4 @@
-from ventana_ui import * 
+from ventana_ui3 import * 
 from Logica.tabla import * 
 from Logica.hokaCalc import * 
 import shutil
@@ -6,8 +6,10 @@ import subprocess
 _translate = QtCore.QCoreApplication.translate
 from PyQt5.QtCore import QDate, QTime, QDateTime, Qt
 import os
+import win32gui, win32con
 
-
+The_program_to_hide = win32gui.GetForegroundWindow()
+win32gui.ShowWindow(The_program_to_hide , win32con.SW_HIDE)
 class MainWindow(QtWidgets.QMainWindow, Ui_Huertas):
     def __init__(self, *args, **kwargs):
         QtWidgets.QMainWindow.__init__(self, *args, **kwargs)
@@ -38,16 +40,12 @@ class MainWindow(QtWidgets.QMainWindow, Ui_Huertas):
                 lastname=self.lastname.text()
                 fullname=f'{name} {lastname}'
                 dni=self.dni.text()
-                try:
-                    dni=int(dni)
-                except:
-                    self.label_10.setText(_translate("Huertas", "<html><head/><body><p align=\"center\">DNI no valido!</p></body></html>"))
+                dni=int(dni)
                 importe=float(self.importe.text())
                 inicial=float(self.inicial.text())
                 pendiente=importe-inicial
                 cuota=int(self.cuota.text())
-                if(pendiente<=0):
-                    self.label_10.setText(_translate("Huertas", "<html><head/><body><p align=\"center\">La inicial no puede ser igual o mayor al importe!</p></body></html>"))
+                lote=self.lote.text()
                 proyecto=str(self.comboBox.currentText())
                 if(self.radioButton_2.isChecked()):
                     moneda="Dolar"
@@ -81,7 +79,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_Huertas):
                 resultado = "Pago-Cuotas.xlsx"
     
                 shutil.copyfile(fuente, resultado)
-                dataExcel(proyecto,fullname,dni,tabla,datos,fechaContrato,moneda,pendiente)
+                dataExcel(proyecto,fullname,dni,tabla,datos,fechaContrato,moneda,pendiente,lote)
                 os.startfile("Pago-Cuotas.xlsx")
 
                 

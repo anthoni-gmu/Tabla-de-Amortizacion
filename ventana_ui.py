@@ -26,7 +26,7 @@ class Ui_Huertas(object):
         self.label_2.setGeometry(QtCore.QRect(50, 70, 201, 231))
         self.label_2.setFrameShadow(QtWidgets.QFrame.Plain)
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("respaldo/imagenHuertas.ico"))
+        self.label_2.setPixmap(QtGui.QPixmap("img/imagenHuertas.ico"))
         self.label_2.setObjectName("label_2")
         self.label_5 = QtWidgets.QLabel(self.frame)
         self.label_5.setGeometry(QtCore.QRect(340, 150, 91, 41))
@@ -43,7 +43,7 @@ class Ui_Huertas(object):
         self.name = QtWidgets.QLineEdit(self.frame)
         self.name.setGeometry(QtCore.QRect(440, 154, 521, 31))
         font = QtGui.QFont()
-        font.setPointSize(12)
+        font.setPointSize(11)
         self.name.setFont(font)
         self.name.setStyleSheet("border-color: rgb(18, 154, 168);\n"
 "background-color: rgb(255, 254, 248);")
@@ -53,7 +53,7 @@ class Ui_Huertas(object):
         self.lastname = QtWidgets.QLineEdit(self.frame)
         self.lastname.setGeometry(QtCore.QRect(440, 220, 521, 31))
         font = QtGui.QFont()
-        font.setPointSize(12)
+        font.setPointSize(11)
         self.lastname.setFont(font)
         self.lastname.setStyleSheet("border-color: rgb(18, 154, 168);\n"
 "background-color: rgb(255, 254, 248);")
@@ -61,9 +61,9 @@ class Ui_Huertas(object):
         self.lastname.setClearButtonEnabled(True)
         self.lastname.setObjectName("lastname")
         self.dni = QtWidgets.QLineEdit(self.frame)
-        self.dni.setGeometry(QtCore.QRect(440, 280, 121, 31))
+        self.dni.setGeometry(QtCore.QRect(440, 280, 200, 31))
         font = QtGui.QFont()
-        font.setPointSize(12)
+        font.setPointSize(11)
         self.dni.setFont(font)
         self.dni.setStyleSheet("border-color: rgb(18, 154, 168);\n"
 "background-color: rgb(255, 254, 248);")
@@ -90,13 +90,13 @@ class Ui_Huertas(object):
         self.btnContrato.setGeometry(QtCore.QRect(540, 450, 131, 41))
         self.btnContrato.setStyleSheet("background-color: rgb(101, 255, 183);\n"
 "\n"
-"font: 75 12pt \"MS Shell Dlg 2\";")
+"font: 75 9pt \"MS Shell Dlg 2\";")
         self.btnContrato.setObjectName("btnContrato")
         self.btnInicial = QtWidgets.QPushButton(self.frame)
         self.btnInicial.setGeometry(QtCore.QRect(540, 560, 131, 41))
         self.btnInicial.setStyleSheet("background-color: rgb(101, 255, 183);\n"
 "\n"
-"font: 75 12pt \"MS Shell Dlg 2\";")
+"font: 75 9pt \"MS Shell Dlg 2\";")
         self.btnInicial.setObjectName("btnInicial")
         self.label_8 = QtWidgets.QLabel(self.frame)
         self.label_8.setGeometry(QtCore.QRect(740, 450, 91, 41))
