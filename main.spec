@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(['main.py'],
-             pathex=['C:\\Users\\Anthoni\\Documents\\GitHub\\Tabla-de-Amortizacion'],
+             pathex=['C:\\Users\\Anthoni\\Desktop\\xddd'],
              binaries=[],
              datas=[],
              hiddenimports=[],

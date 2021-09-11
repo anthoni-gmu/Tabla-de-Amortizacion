@@ -1,5 +1,4 @@
 import numpy_financial as npf
-
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 def Calculo(tabla):
@@ -11,13 +10,16 @@ def Calculo(tabla):
     datos = []
     saldo = capital
     today =tabla[3]
+    contrato =tabla[4]
+    fecha_ct = datetime.strptime(contrato, '%Y-%m-%d')
+    
     fecha_dt = datetime.strptime(today, '%Y-%m-%d')
 
     for i in range(1, plazo+1):
         pago_capital = npf.ppmt(interes, i, plazo, -capital, 0)
         pago_int = cuota - pago_capital
         saldo -= pago_capital
-        linea = [fecha_dt, format(cuota, '0,.0f'), format(pago_capital, '0,.0f'), format(pago_int, '0,.0f'), format(saldo, '0,.0f')]
+        linea = [fecha_dt, format(cuota, '0,.0f'), format(pago_capital, '0,.0f'), format(pago_int, '0,.0f'), format(saldo, '0,.0f'),fecha_ct]
         fecha_dt = fecha_dt + relativedelta(months=1)  
         datos.append(linea)
     return datos
